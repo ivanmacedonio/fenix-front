@@ -37,7 +37,7 @@ export const Detail = () => {
       ) : (
         <article className="detail-cnt">
           <div className="img-detail">
-            <img src={`http://127.0.0.1:9000${data.image}`} alt="" />
+            <img src={`https://fenixapiecommerce.onrender.com${data.image}`} alt="" />
           </div>
           <div className="detail-card">
             <h2 id="envio">Envío gratis</h2>

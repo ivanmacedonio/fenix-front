@@ -29,7 +29,7 @@ export const Checkout = () => {
   async function storeData(data) {
     try {
       const newData = { ...data, total: total };
-      const res = await axios.post("http://localhost:9000/store/", {
+      const res = await axios.post("https://fenixapiecommerce.onrender.com/store/", {
         dataUser: newData,
       });
       console.log(res.data);
