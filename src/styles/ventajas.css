@@ -1,0 +1,51 @@
+.ventajas-cnt {
+    background-color: rgb(38, 38, 44);
+    font-family: 'montserrat';
+    color: white;
+}
+
+.ventajas-cnt h3 {
+    color: rgb(223, 220, 127);
+    margin: 0;
+}
+
+.ventajas-cnt h1 {
+    font-size: 2rem;
+}
+
+.item-ventaja img {
+    width: 4rem;
+}
+
+.item-ventaja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items-ventajas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    gap: 5rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.items-ventajas h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 20rem;
+}
+
+@media(max-width: 768px){
+    .items-ventajas{
+        display: flex;
+        flex-direction: column;
+        gap:3rem;
+        text-align: center;
+    }
+    .item-ventaja p{
+        margin: 0;
+    }
+}

@@ -1,0 +1,31 @@
+.redes-link img{
+    max-width: 2.3rem;
+    cursor: pointer;
+}
+.redes-link{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.contact-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    font-family: 'montserrat';
+}
+.contact-cnt h1{
+    font-size: 1.3rem;
+    color: rgb(35, 35, 35);
+}
+
+@media(max-width: 768px){
+    .contact-cnt{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+}

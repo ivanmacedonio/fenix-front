@@ -1,0 +1,6 @@
+.footer-cnt{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   width: 60%;
+   margin: 10rem auto;
+}

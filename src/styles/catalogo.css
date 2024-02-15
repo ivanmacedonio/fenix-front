@@ -1,0 +1,48 @@
+.catalogo-cnt {
+    font-family: 'montserrat';
+    margin-bottom: 10rem;
+}
+
+.title-catalogo {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-catalogo input{
+    font-family: 'montserrat';
+    outline: none;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    color: gray;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.title-catalogo h2 {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+.title-catalogo p {
+    margin: 10px 0;
+    color: gray;
+    font-size: 1rem;
+}
+
+@media(max-width: 768px){
+    .title-catalogo{
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .title-catalogo h2{
+        font-size: 1.4rem;
+    }
+    .title-catalogo p{
+        font-size: 0.9rem;
+    }
+}

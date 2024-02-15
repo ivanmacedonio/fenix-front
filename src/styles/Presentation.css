@@ -1,0 +1,20 @@
+.presentation-cnt{
+    width: 60%;
+    margin: 0 auto;
+    height: 60vh;
+    background-image: url('../assets/presentation.webp');
+    background-size: cover;
+    border-radius: 2rem;
+}
+
+@media(max-width: 768px){
+    .presentation-cnt{
+        width: 80%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: none;
+        margin-bottom: 2rem;
+    }
+}

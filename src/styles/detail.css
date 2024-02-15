@@ -1,0 +1,77 @@
+.detail-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 5rem;
+    font-family: 'montserrat';
+    margin-top: 5rem;
+}
+.detail-cnt h2{
+    font-size: 1.8rem;
+    margin: 0;
+}
+.detail-cnt p{
+    font-size: 1rem;
+    color: gray;
+}
+.detail-cnt h3{
+    color: green;
+    font-weight: 500;
+}
+.detail-cnt button{
+    background-color: transparent;
+    border: none;
+    font-family: 'montserrat';
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.img-detail img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+}
+
+.detail-card{
+    width: 30%;
+}
+
+#envio{
+    font-size: 1.2rem;
+    color: green;
+    margin-bottom: 1rem;
+}
+.detail-cnt label{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+.detail-cnt label img{
+    max-width: 1.7rem;
+}
+#added{
+    margin-top: 2rem;
+    color: green;
+    margin-bottom: 0;
+}
+@media(max-width: 768px){
+    .detail-cnt{
+        flex-direction: column;
+    }
+    .detail-card{
+        width: 80%;
+        margin-bottom: 5rem;
+        text-wrap: balance;
+    }
+    .detail-cnt p{
+        text-wrap: wrap;
+    }
+}

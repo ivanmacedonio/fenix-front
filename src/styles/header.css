@@ -1,0 +1,82 @@
+.header-cnt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'montserrat';
+    padding: 2rem 0;
+}
+.header-cnt label{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.logo-cnt{
+    display: flex;
+    align-items: center;
+}
+.logo-cnt label img{
+    max-width: 8rem;
+}
+.header-cnt img{
+    max-width: 2.5rem;
+    cursor: pointer;
+}
+.links-cnt{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.links-cnt a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.menu-mobile, .links-mobile, .cart-label{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .links-cnt{
+        display: none;
+    }
+    .header-cnt label img{
+        width: 10rem;
+    }
+    .menu-mobile{
+        display: flex;
+    }
+    .menu-mobile img{
+        max-width: 4.5rem;
+    }
+    .links-mobile{
+        display: flex !important;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 3rem;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin-bottom: 2rem;
+    }
+    .links-mobile a{
+        text-decoration: none;
+        color: inherit;
+        font-family: 'montserrat';
+        font-size: 1.3rem;
+    }
+    .cart-label{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .cart-label a{
+        font-weight: 600;
+        color: rgb(0, 177, 0);
+    }
+    .cart-label img{
+        max-width: 2rem;
+    }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wp {
+  max-width: 3.5rem;
+  position: fixed;
+  top: 90%;
+  left: 94%;
+  cursor: pointer;
+}
+
+
+@media(max-width: 768px) {
+  #wp {
+    max-width: 3rem;
+    left: 80%;
+  }
+}
