@@ -4,6 +4,7 @@ import { Loader } from "../src/components/Loader";
 import { Catalogo } from "../src/pages/Catalogo";
 import { Hub } from "../src/pages/Hub";
 import "./App.css";
+import { Admin } from "./pages/Admin";
 import { Checkout } from "./pages/Checkout";
 import { Detail } from "./pages/Detail";
 function App() {
@@ -23,6 +24,10 @@ function App() {
     {
       path: "/checkout",
       element: <Checkout></Checkout>,
+    },
+    {
+      path: "/panel/fenix",
+      element: <Admin></Admin>
     },
   ]);
   const [loading, setloading] = useState(true);

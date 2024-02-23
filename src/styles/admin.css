@@ -1,0 +1,32 @@
+.admin-cnt form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.admin-cnt {
+    margin: 0 auto;
+    max-width: 50%;
+    margin-top: 6rem;
+}
+
+.acciones-cnt {
+    margin-top: 5rem;
+}
+
+.product-item-admin {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.product-item-admin button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -7,15 +7,14 @@ const useFetchData = (url, product_id) => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        async function fetchData(){
-            
-            try{
-                 
-                    const res = await axios.get(url)
-                    setData(res.data)
-                    setLoading(false)
-                    console.log(res.data)
-            } catch(error){
+        async function fetchData() {
+
+            try {
+
+                const res = await axios.get(url)
+                setData(res.data.products)
+                setLoading(false)
+            } catch (error) {
                 console.log(error)
                 setLoading(false)
                 setError(error)
@@ -24,7 +23,7 @@ const useFetchData = (url, product_id) => {
         fetchData()
     }, [url])
 
-    return {data, loading, error}
+    return { data, loading, error }
 
 }
 export default useFetchData

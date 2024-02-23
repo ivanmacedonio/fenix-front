@@ -6,7 +6,12 @@ export const About = () => {
   return (
     <section className="about-cnt">
       <img src={earpods} alt="" />
-      <motion.article className="text-about" initial = {{x: 100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.89}}>
+      <motion.article
+        className="text-about"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.89 }}
+      >
         <h1>Nosotros</h1>
         <p>
           {" "}

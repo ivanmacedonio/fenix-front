@@ -6,7 +6,7 @@ import useFetchData from "../hooks/FetchData";
 import "../styles/List.css";
 export const List = () => {
   const { data, loading, error } = useFetchData(
-    "https://fenixapiecommerce.onrender.com/products/"
+    "https://fenix-api-express.onrender.com/products/"
   );
   const nav = useNavigate();
   return (
@@ -16,7 +16,7 @@ export const List = () => {
           "cargando"
         ) : (
           <React.Fragment>
-            {data.slice(0, 6).map((product, index) => (
+            {Array.isArray(data) && data.slice(0, 6).map((product, index) => (
               <article key={index}>
                 <motion.div
                   className="product-item"
@@ -24,7 +24,7 @@ export const List = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   onClick={() => {
-                    nav(`detail/${product.id}/`);
+                    nav(`detail/${product._id}/`);
                   }}
                 >
                   {product.available === false ? (

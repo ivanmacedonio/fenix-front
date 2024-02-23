@@ -8,7 +8,7 @@ import useFetchData from "../hooks/FetchData";
 import "../styles/catalogo.css";
 export const Catalogo = () => {
   const { data, loading, error } = useFetchData(
-    "https://fenixapiecommerce.onrender.com/products/"
+    "https://fenix-api-express.onrender.com/products/"
   );
   const [searchTerms, setSearchTerms] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(null);
@@ -56,7 +56,7 @@ export const Catalogo = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   onClick={() => {
-                    nav(`/detail/${product.id}/`);
+                    nav(`/detail/${product._id}/`);
                   }}
                 >
                   {product.available === false ? (

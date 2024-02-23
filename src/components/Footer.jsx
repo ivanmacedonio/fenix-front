@@ -7,7 +7,7 @@ import useFetchData from "../hooks/FetchData";
 import "../styles/footer.css";
 export const Footer = () => {
   const { data, loading, error } = useFetchData(
-    "https://fenixapiecommerce.onrender.com/products/"
+    "https://fenix-api-express.onrender.com/products/"
   );
   const nav = useNavigate();
   return (
