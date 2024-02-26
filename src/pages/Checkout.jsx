@@ -29,9 +29,12 @@ export const Checkout = () => {
   async function storeData(data) {
     try {
       const newData = { ...data, total: total };
-      const res = await axios.post("https://fenixapiecommerce.onrender.com/store/", {
-        dataUser: newData,
-      });
+      const res = await axios.post(
+        "https://fenixapiecommerce.onrender.com/store/",
+        {
+          dataUser: newData,
+        }
+      );
       console.log(res.data);
       console.log(res.status);
       setAccepted(true);
@@ -42,7 +45,37 @@ export const Checkout = () => {
 
   function submit(data) {
     setUserData(data);
-    storeData(data);
+    setAccepted(true)
+    // storeData(data);
+    console.log(userData);
+  }
+
+  function onApprove(userData) {
+    const serviceId = "service_tc4eqdb";
+    const templateId = "template_gjjoj5o";
+    const userId = "Iu17bkOMZ1tF0nVOw";
+
+    const templateParams = {
+      nombre: userData.nombre,
+      apellido: userData.apellido,
+      telefono: userData.telefono,
+      email: userData.email,
+      direccion: userData.direccion,
+      ciudad: userData.ciudad,
+      provincia: userData.provincia,
+      codigo_postal: userData.codigo_postal,
+      total: total,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log("Correo electrónico enviado con éxito:", response);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error al enviar el correo electrónico:", error);
+      });
   }
 
   return (
@@ -93,6 +126,7 @@ export const Checkout = () => {
                 totalValue={total}
                 invoice={"Compra via paypal"}
                 userData={userData}
+                onApprove={onApprove}
               />
             ) : (
               <button type="submit">Realizar pedido</button>
