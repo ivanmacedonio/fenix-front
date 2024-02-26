@@ -18,6 +18,13 @@ export const Footer = () => {
         <footer className="products-cnt" style={{ marginBottom: "10rem" }}>
           {data.slice(0, 3).map((product, index) => (
             <article key={index}>
+              {product.discount !== null ? (
+                <div className="flag">
+                  <span>10% descuento semana de la madre</span>
+                </div>
+              ) : (
+                ""
+              )}
               <motion.div
                 className="product-item"
                 initial={{ opacity: 0, y: 100 }}

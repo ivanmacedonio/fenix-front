@@ -50,6 +50,13 @@ export const Catalogo = () => {
           <div className="products-cnt">
             {filteredProducts.map((product, index) => (
               <article key={index}>
+                {product.discount !== null ? (
+                  <div className="flag">
+                    <span>10% descuento semana de la madre</span>
+                  </div>
+                ) : (
+                  ""
+                )}
                 <motion.div
                   className="product-item"
                   initial={{ opacity: 0, y: 100 }}
