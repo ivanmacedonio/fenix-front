@@ -113,8 +113,27 @@
     font-weight: 700;
 }
 
+.flag{
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(255, 99, 99);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+}
+
 
 @media(max-width: 768px) {
+
+    .flag{
+        position: relative;
+        font-size: 0.8rem;
+        width: fit-content;
+        border-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+
     .stock {
         position: absolute;
         background-color: rgb(251, 55, 55);
