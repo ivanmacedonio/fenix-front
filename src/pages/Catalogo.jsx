@@ -52,7 +52,7 @@ export const Catalogo = () => {
               <article key={index}>
                 {product.discount !== null ? (
                   <div className="flag">
-                    <span>10% descuento semana de la madre</span>
+                    <span>10% de descuento</span>
                   </div>
                 ) : (
                   ""
