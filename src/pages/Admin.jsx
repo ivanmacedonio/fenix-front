@@ -87,7 +87,9 @@ export const Admin = () => {
           {...register("price", {
             required: true,
           })}
+          step="any"
         />
+
         <input
           type="number"
           placeholder="Ingresa el descuento"
