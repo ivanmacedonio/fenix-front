@@ -16,7 +16,9 @@ export const Admin = () => {
   useEffect(() => {
     async function getProductsAdmin() {
       try {
-        const res = await axios.get("https://fenix-api-express.onrender.com/products/");
+        const res = await axios.get(
+          "https://fenix-api-express.onrender.com/products/"
+        );
         console.log(res.data);
         setProducts(res.data.products);
       } catch (error) {
@@ -27,7 +29,9 @@ export const Admin = () => {
   }, []);
 
   const deleteProduct = async (pk) => {
-    const res = await axios.delete(`https://fenix-api-express.onrender.com/products/${pk}`);
+    const res = await axios.delete(
+      `https://fenix-api-express.onrender.com/products/${pk}`
+    );
     console.log(res.data);
     alert("producto eliminado");
     window.location.reload();
@@ -53,7 +57,7 @@ export const Admin = () => {
       );
       console.log(formData);
       alert("Producto creado exitosamente!");
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -78,15 +82,10 @@ export const Admin = () => {
           })}
         />
         <input
-          type="text"
+          type="number"
           placeholder="Ingresa el precio"
           {...register("price", {
             required: true,
-            pattern: {
-              value: /^[0-9]+(\.[0-9]{1,2})?$/,
-              message:
-                "Ingresa un precio válido (opcionalmente con hasta 2 decimales).",
-            },
           })}
         />
         <input

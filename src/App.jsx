@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Loader } from "../src/components/Loader";
 import { Catalogo } from "../src/pages/Catalogo";
 import { Hub } from "../src/pages/Hub";
 import "./App.css";
@@ -27,22 +25,11 @@ function App() {
     },
     {
       path: "/panel/fenix",
-      element: <Admin></Admin>
+      element: <Admin></Admin>,
     },
   ]);
-  const [loading, setloading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setloading(false);
-    }, 3000);
-  }, []);
-  return loading ? (
-    <div className="loader">
-      <Loader />
-    </div>
-  ) : (
-    <RouterProvider router={router} />
-  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
